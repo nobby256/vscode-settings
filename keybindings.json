@@ -1,0 +1,239 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+    //
+    // emacs-region
+    //
+    {
+        "key": "ctrl+f",
+        "command": "-cursorRight",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-cursorLeft",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-cursorUp",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-cursorDown",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-cursorRightSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-cursorLeftSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-cursorUpSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "-cursorDownSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-cursorPageDown",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "alt+v",
+        "command": "-cursorPageUp",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "shift+alt+oem_period",
+        "command": "-cursorBottom",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "shift+alt+oem_comma",
+        "command": "-cursorTop",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-cursorEnd",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-cursorHome",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    // 行を選択のキーアサインの変更
+    {
+        "key": "shift+alt+down",
+        "command": "expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    // リージョンキャンセルの変更
+    {
+        "key": "Escape",
+        "command": "emacs.exitRegionMode",
+        "when": "inRegionMode"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-cancelSelection",
+        "when": "editorHasSelection && editorHasTextFocus"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-emacs.exitRegionMode",
+        "when": "inRegionMode"
+    },
+    // 行頭へ移動(リージョン対応)のキーアサイン変更
+    {
+        "key": "home",
+        "command": "cursorHomeSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "-cursorHomeSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    // 行末へ移動(リージョン対応)のキーアサイン変更
+    {
+        "key": "end",
+        "command": "cursorEndSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "-cursorEndSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    // ファイルの先頭(リージョン対応)のキーアサイン変更
+    {
+        "key": "ctrl+home",
+        "command": "cursorTopSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "shift+alt+oem_comma",
+        "command": "-cursorTopSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    // ファイルの末尾(リージョン対応)のキーアサイン変更
+    {
+        "key": "ctrl+end",
+        "command": "cursorBottomSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    {
+        "key": "shift+alt+oem_period",
+        "command": "-cursorBottomSelect",
+        "when": "editorTextFocus && inRegionMode"
+    },
+    // PageDown(リージョン対応)のキーアサイン変更
+    {
+        "key": "pagedown",
+        "command": "cursorPageDownSelect",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "-cursorPageDownSelect",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    // PageUp(リージョン対応)のキーアサイン変更
+    {
+        "key": "pageup",
+        "command": "cursorPageUpSelect",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    {
+        "key": "alt+v",
+        "command": "-cursorPageUpSelect",
+        "when": "editorTextFocus && !inRegionMode"
+    },
+    // リージョン開始のキーアサインの変更
+    {
+        "key": "shift+alt+enter",
+        "command": "emacs.startRegionMode",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "-emacs.startRegionMode",
+        "when": "editorFocus"
+    },
+    // ワード選択のキーアサイン変更
+    {
+        "key": "shift+alt+up",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-editor.action.addSelectionToNextFindMatch",
+        "when": "editorFocus"
+    },
+    // コピーのキーアサイン変更
+    {
+        "key": "ctrl+c",
+        "command": "emacs.action.clipboardCopyAction"
+    },
+    {
+        "key": "alt+w",
+        "command": "-emacs.action.clipboardCopyAction"
+    },
+    // カットのキーアサイン変更
+    {
+        "key": "ctrl+x",
+        "command": "emacs.action.clipboardCutAction"
+    },
+    {
+        "key": "ctrl+w",
+        "command": "-emacs.action.clipboardCutAction"
+    },
+    // ペーストのキーアサイン変更
+    {
+        "key": "ctrl+v",
+        "command": "emacs.action.clipboardPasteAction"
+    },
+    {
+        "key": "ctrl+y",
+        "command": "-emacs.action.clipboardPasteAction"
+    },
+    //
+    // oneline-scroll
+    //
+    // スクロールDownのキーアサイン変更
+    {
+        "key": "ctrl+down",
+        "command": "onelinescroll.scrollDown"
+    },
+    {
+        "key": "alt+n",
+        "command": "-onelinescroll.scrollDown"
+    },
+    // スクロールUpのキーアサイン変更
+    {
+        "key": "ctrl+up",
+        "command": "onelinescroll.scrollUp"
+    },
+    {
+        "key": "alt+p",
+        "command": "-onelinescroll.scrollUp"
+    },
+]
